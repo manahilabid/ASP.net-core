@@ -1,0 +1,37 @@
+﻿
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+<section class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card text-center">
+                <h1>Math's operations</h1>
+                <form class="w-100 card-body" method="post" action="~/Calculator/index">
+                    <input type="number" placeholder="Enter first number" class="form-control
+                           mb-3 w-100" name="num1" />
+                    <input type="number" placeholder="Enter second number" class="form-control
+                           mb-3 w-100" name="num2" />
+                    <label>
+                        Select Your Operator
+                        <select class="form-select mb-3" name="operator">
+                            <option value="add">Addition</option>
+                            <option value="sub">Subtraction</option>
+                            <option value="multi">Multiple</option>
+                            <option value="div">Division</option>
+                        </select>
+                    </label>
+                    <button class="btn btn-primary w-100">Calculate</button>
+                </form>
+                @if (ViewBag.result != null) 
+                {
+                    <div class="alert alert-info">@ViewBag.result</div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
