@@ -1,0 +1,18 @@
+﻿@Model class_06.Student
+{
+ViewBag.Title = "index";
+}
+@if (Model != null)
+{
+    <ul>
+        <li>Id: @Model.Id</li>
+        <li>Name: @Model.Name</li>
+        <li>Email: @Model.Email</li>
+        <li>Phone: @Model.Phone</li>
+
+    </ul>
+}
+else
+{
+    <p>No Found Data</p>
+}
